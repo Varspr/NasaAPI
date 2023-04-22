@@ -1,0 +1,10 @@
+version: "3.10"
+
+services:
+  web:
+    build: .
+    command: python3 app/main.py
+    volumes:
+      - .:/app
+    ports:
+      - 8080:8080
