@@ -1,7 +1,7 @@
-
 from aiohttp import ClientSession
 
 from pydantic import BaseModel
+import requests
 
 
 class ApodResponse(BaseModel):
@@ -24,5 +24,6 @@ class NasaApod:
                 res = await resp.json()
 
                 return ApodResponse(date=res["date"], explanation=res["explanation"], hdurl=res["hdurl"])
+
 
 

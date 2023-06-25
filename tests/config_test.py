@@ -1,12 +1,12 @@
 import pytest
 from aioresponses import aioresponses
 
-from apod_service.config import ApodConfig
+from config import Config
 
 
 @pytest.fixture
-def test_config() -> ApodConfig:
-    return ApodConfig(apod_pic_service="FW6HkzJlBHzEZZnqsBuLu5K8TpGWvRpmM0Vwflx1")
+def test_config() -> Config:
+    return Config(apod_pic_service="FW6HkzJlBHzEZZnqsBuLu5K8TpGWvRpmM0Vwflx1")
 
 
 @pytest.fixture

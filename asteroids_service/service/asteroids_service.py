@@ -1,7 +1,7 @@
 from aiohttp import ClientSession
 
 
-class NasaApi:
+class NasaAsteroid:
     def __init__(self, api_key):
         self.api_key = api_key
         self.host = "https://api.nasa.gov"
@@ -15,5 +15,4 @@ class NasaApi:
                 "end_date": end_date,
             }) as resp:
                 r = await resp.json()
-
         return r

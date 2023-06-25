@@ -1,9 +1,9 @@
-from typing import Any, List, Coroutine
+
 
 from fastapi import APIRouter, Depends
-from apod_service.dependencies import apod_pic_dependency
-from apod_service.inegration.apod_service import ApodResponse
-from apod_service.services.apod import ApodService
+from apod_service.services.dependencies import apod_pic_dependency
+from apod_service.services.apod_service import ApodResponse
+from apod_service.inegration.apod import ApodService
 
 router = APIRouter(
     prefix="/api",

@@ -1,9 +1,8 @@
 import json
 
 import pytest
-from tests.config_test import mocked, test_config
-from apod_service.config import ApodConfig
-from apod_service.inegration.apod_service import NasaApod, ApodResponse
+from config import Config
+from apod_service.services.apod_service import NasaApod, ApodResponse
 
 
 @pytest.fixture
@@ -26,8 +25,8 @@ def apod_api_responce() -> str:
 
 
 @pytest.fixture
-def apod_api(test_config: ApodConfig) -> NasaApod:
-    return NasaApod(test_config.apod_pic_service)
+def apod_api(test_config: Config) -> NasaApod:
+    return NasaApod(test_config.api_key)
 
 
 @pytest.mark.asyncio

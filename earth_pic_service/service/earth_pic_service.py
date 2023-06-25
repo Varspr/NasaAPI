@@ -5,7 +5,7 @@ from aiohttp import ClientSession
 from geopy import Nominatim
 
 
-class NasaApi:
+class NasaEarth:
     def __init__(self, api_key):
         self.api_key = api_key
         self.host = "https://api.nasa.gov"

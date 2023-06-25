@@ -1,4 +1,4 @@
-from apod_service.inegration.apod_service import NasaApod, ApodResponse
+from apod_service.services.apod_service import NasaApod, ApodResponse
 
 
 class ApodService:
